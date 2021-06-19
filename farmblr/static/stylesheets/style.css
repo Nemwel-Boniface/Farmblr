@@ -1,0 +1,217 @@
+/*This csss file styles completely the top part which includes, logo, navbar links, background photo, and headings of the farmbir landing page. was designed using the mobile first approach. */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Styling for the landing page begins here*/
+/*Let's put a background photo to our landing page*/
+.landing-page
+{
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproduces.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+/*the top nav bar social media icons*/
+.nav-bar-icons
+{
+    width: 100%;
+    background: #369432;
+    text-align: center;
+}
+.nav-bar-icons i
+{
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+}
+.top-contact a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*The landing middle description and links*/
+.nav-logo img
+{
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+}
+.landing-description
+{
+    color: #fff;
+    text-align: center;
+    margin: 25px 20px 15px 20px; 
+}
+.landing-desc-heading
+{
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+.landing-desc-heading h2
+{
+    font-size: 30px;
+}
+
+/*Form for call to action*/
+
+.landing-desc-form
+{
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+}
+.landing-desc-form i
+{
+    color: #000;
+    font-size: 22px;
+}
+.landing-desc-form input
+{
+    border: 0;
+    font-size: 14px;
+    margin: auto auto;
+    height: 33px;
+}
+.landing-desc-form .fa-search
+{
+    margin-right: 6px;
+}
+.landing-desc-form .fa-long-arrow-right
+{
+    margin-left: 6px;
+    transition: 0.5s;;
+}
+.landing-desc-form .fa-long-arrow-right:hover
+{
+    background: #000;
+    color: #fff;;
+}
+
+.signUp
+{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    color: #000;
+}
+
+
+
+/*Responsive design now*/
+@media screen and (min-width: 73em)
+{
+    
+    .landing-page
+    {
+        height: 95vh;
+    }
+    
+   /*top socials and contact bar*/
+    .nav-bar-icons
+    {
+        display: flex;
+        text-align: center;
+    }
+    .nav-bar-icons .top-socials
+    {
+        margin-left: 32%;
+    }
+    .nav-bar-icons .top-contact
+    {
+        margin-left: 15%;
+    }
+    
+    /*nav logo*/
+    
+    .nav-logo img
+    {
+        width: 200px;
+        height: 150px;
+        margin-top: 60px;
+    }
+    
+    
+    /*The landing description now*/
+    
+    .landing-description
+    {
+        margin: 100px 50px 45px 50px;
+    }
+    .landing-desc-heading 
+    {
+        margin: 45px 50px 55px 50px;
+    }
+    .landing-desc-heading h2
+    {
+        font-size: 63px;
+    }
+    .landing-desc-form
+    {
+        width: 30%;
+        margin: 0 auto;
+    }
+    
+    .landing-desc-form i
+    {
+        color: #000;
+        font-size: 25px;
+    }
+    .landing-desc-form input
+    {
+        border: 0;
+        font-size: 17px;
+        margin: auto auto;
+    }
+    .landing-desc-form .fa-search
+    {
+        margin-right: 8px;
+    }
+    .landing-desc-form .fa-long-arrow-right
+    {
+        margin-left: 8px;
+        background: #369432;
+        color: #fff;
+        border-radius: 50%;
+        padding: 6px;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
