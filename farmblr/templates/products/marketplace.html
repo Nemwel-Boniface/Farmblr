@@ -69,15 +69,9 @@
                     <div>
                         <select id="categories">
                             <option value="">All categories</option>
-                            <option value="Rice&cereals">Rice & Cereals</option>
-                            <option value="vegetables">Vegetables</option>
-                            <option value="meat&fish">Meat & Fish</option>
-                            <option value="flour&sugar">Flour & Sugar</option>
-                            <output value="spaghetti">Spaghetti</output>
-                            <option value="spices&salt">Spices & Salt</option>
-                            <option value="cookingfats&oils">Cooking Fats & oils</option>
-                            <output value="spreads">Spreads</output>
-                            <option value="beverages">Beverages</option>
+                            {% for category in categories %}
+                                <option value="{{ category }}">{{ category}}</option>
+                            {% endfor %}
                         </select>
                     </div>
 
