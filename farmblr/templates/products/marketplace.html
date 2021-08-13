@@ -139,246 +139,33 @@
                 <h2>Our Products Categories</h2>
             </div>
 
-            <article class="prod">
-                <div class="prod-heading">
-                    <h2>Rice and Cereals</h2>
-                    <p class="faded">Rice, Beans etc..</p>
-                </div>
+            {% for category in categories %}
+                <article class="prod">
+                    <div class="prod-heading">
+                        <h2>{{ category }}</h2>
+                        <p class="faded">{{ category }}..</p>
+                    </div>
 
-                <div class="subsections">
-                    <div class="item">
-                        <img src="{% static 'images/bagsofrice.jpeg' %}" alt="bags of rice">
+                    <div class="subsections">
+                        {% for product in products %}
+                        {% if product.category == category %}
+                        <div class="item">
+                        <img src="{{product.photo.url}}" alt="{{product.product_name}}">
                         <div>
-                            <p>Rice Mwea Pishori</p>
+                            <p>{{product.product_name}}</p>
                             <h2 class="highlighted">New</h2>
                             <p class="faded">From : Mwea</p>
-                            <p class="priced">KSH 100</p>
+                            <p class="priced">{{product.price}}</p>
                         </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/bagsofcereals.jpeg' %}" alt="bags of cereals">
-                        <div>
-                            <p>Cereals beans</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Kinangop</p>
-                            <p class="priced">KSH 100</p>
                         </div>
+                        {% endif %}
+
+                        {% endfor %}
                     </div>
 
-                    <div class="item">
-                        <img src="{% static 'images/bagsofrice.jpeg' %}" alt="bags of rice">
-                        <div>
-                            <p>Rice Mwea Pishori</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Mwea</p>
-                            <p class="priced">KSH 100</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
+                </article>
+            {% endfor %}
 
-
-            <article class="prod">
-                <div class="prod-heading">
-                    <h2>Vegetables</h2>
-                    <p class="faded">Capsicum, Tomatoes etc..</p>
-                </div>
-
-                <div class="subsections">
-                    <div class="item">
-                        <img src="{% static 'images/farmproduces.jpg' %}" alt="Vegetables">
-                        <div>
-                            <p>Capsicum Tomatoes</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Meru</p>
-                            <p class="priced">KSH 100</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/farmproducts.jpg' %}" alt="Vegetables">
-                        <div>
-                            <p>Capsicum Tomatoes</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Meru</p>
-                            <p class="priced">KSH 100</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/farmproduces.jpg' %}" alt="Vegetables">
-                        <div>
-                            <p>Capsicum Tomatoes</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Meru</p>
-                            <p class="priced">KSH 100</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="prod">
-                <div class="prod-heading">
-                    <h2>Meats and Fish</h2>
-                    <p class="faded">Meats and Fish etc..</p>
-                </div>
-
-                <div class="subsections">
-                    <div class="item">
-                        <img src="{% static 'images/imagesofmeats.jpeg' %}" alt="imagesofmeats">
-                        <div>
-                            <p>Beef, Muttock</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Isiolo</p>
-                            <p class="priced">KSH 800</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/imagesoffish.jpeg' %}" alt="imagesoffish">
-                        <div>
-                            <p>Tilapia</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Kisumu</p>
-                            <p class="priced">KSH 1000</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/imagesofmeats.jpeg' %}" alt="imagesofmeats">
-                        <div>
-                            <p>Beef, Muttock</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Isiolo</p>
-                            <p class="priced">KSH 800</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="prod">
-                <div class="prod-heading">
-                    <h2>Maize and Sugar</h2>
-                    <p class="faded">Maize and Sugar etc..</p>
-                </div>
-
-                <div class="subsections">
-                    <div class="item">
-                        <img src="{% static 'images/bagofmaize.jpeg' %}" alt="bagofmaize">
-                        <div>
-                            <p>Maize flour</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Uasin Gishu</p>
-                            <p class="priced">KSH 200</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/bagofsugar.jpeg' %}" alt="bagofsugar">
-                        <div>
-                            <p>Tilapia</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Mumias</p>
-                            <p class="priced">KSH 700</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/bagofmaize.jpeg' %}" alt="bagofmaize">
-                        <div>
-                            <p>Maize flour</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Uasin Gishu</p>
-                            <p class="priced">KSH 200</p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="prod">
-                <div class="prod-heading">
-                    <h2>Spaghetti</h2>
-                    <p class="faded">Spaghetti etc..</p>
-                </div>
-
-                <div class="subsections">
-                    <div class="item">
-                        <img src="{% static 'images/spaghetti.jpeg' %}" alt="spaghetti">
-                        <div>
-                            <p>Maize flour</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Chennai, India</p>
-                            <p class="priced">KSH 200</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/spaghetti.jpeg' %}" alt="spaghetti">
-                        <div>
-                            <p>Maize flour</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Chennai, India</p>
-                            <p class="priced">KSH 200</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/spaghetti.jpeg' %}" alt="spaghetti">
-                        <div>
-                            <p>Maize flour</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Chennai, India</p>
-                            <p class="priced">KSH 200</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="prod">
-                <div class="prod-heading">
-                    <h2>Spices and Salt</h2>
-                    <p class="faded">Spices and Salt etc..</p>
-                </div>
-
-                <div class="subsections">
-                    <div class="item">
-                        <img src="{% static 'images/bagsofspices.jpeg' %}" alt="bagsofspices">
-                        <div>
-                            <p>Clove, Sage</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Chennai, India</p>
-                            <p class="priced">KSH 200</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/bagsofsalt.jpeg' %}" alt="bagsofsalt">
-                        <div>
-                            <p>Bags of Salt</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Magadi</p>
-                            <p class="priced">KSH 50</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="{% static 'images/bagsofspices.jpeg' %}" alt="bagsofspices">
-                        <div>
-                            <p>Clove, Sage</p>
-                            <h2 class="highlighted">New</h2>
-                            <p class="faded">From : Chennai, India</p>
-                            <p class="priced">KSH 200</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </article>
         </section>
 
         <script>

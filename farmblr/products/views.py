@@ -5,7 +5,10 @@ from .models import Product, Category
 # Create your views here.
 def marketplace(request):
     categories = Category.objects.all()
+    products = Product.objects.all()
+    print(products)
     context = {
         'categories': categories,
+        'products': products,
     }
     return render(request, 'products/marketplace.html', context)
