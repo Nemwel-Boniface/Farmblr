@@ -13,6 +13,7 @@ def get_unique_path(_, filename):
 # Create your models here.
 class Category(models.Model):
     category = models.CharField(max_length=250)
+    examples = models.CharField(max_length=250, default=None)
 
     def __str__(self):
         return '{}'.format(self.category)

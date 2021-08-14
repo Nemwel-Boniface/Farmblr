@@ -6,7 +6,6 @@ from .models import Product, Category
 def marketplace(request):
     categories = Category.objects.all()
     products = Product.objects.all()
-    print(products)
     context = {
         'categories': categories,
         'products': products,
