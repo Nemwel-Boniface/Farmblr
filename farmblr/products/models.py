@@ -26,6 +26,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     product_name = models.CharField(max_length=250)
     description = models.TextField()
+    fr0m = models.CharField(max_length=250, default='farmblr')
     price = models.IntegerField()
     photo = models.ImageField(upload_to=get_unique_path)
 
