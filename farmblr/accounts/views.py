@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout as django_logout
+from django.contrib.auth.decorators import login_required
 
 from .forms import LoginForm
 
@@ -7,8 +8,7 @@ from .forms import LoginForm
 # Create your views here.
 def login_(request):
     if request.user.is_authenticated:
-        pass
-        # TODO Redirect to Dashboard
+        return redirect('/marketplace/')
     next_ = request.GET.get('next')
     # login form
     log_in = LoginForm(request.POST or None)
@@ -24,3 +24,9 @@ def login_(request):
         'log_in': log_in,
     }
     return render(request, 'accounts/login.html', context)
+
+
+@login_required
+def logout(request):
+    django_logout(request)
+    return redirect('/')
