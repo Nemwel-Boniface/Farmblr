@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout as django_logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
-from .forms import LoginForm
+from .forms import LoginForm, CreateUser
 
 
 # Create your views here.
@@ -30,3 +31,21 @@ def login_(request):
 def logout(request):
     django_logout(request)
     return redirect('/')
+
+
+def sign_up(request):
+    sign_up_ = CreateUser(request.POST or None)
+    if sign_up_.is_valid():
+        username = sign_up_.cleaned_data.get('username')
+        password = sign_up_.cleaned_data.get('password')
+        sign_up_.save()
+        authenticate(username=username, password=password)
+        user = User.objects.get(username=username)
+        login(request, user)
+        # TODO: User email confirmation
+        # sendConfirm(user)
+        # return redirect(activate)
+    context = {
+        "sign_up": sign_up_,
+    }
+    return render(request, 'accounts/signup.html', context)
