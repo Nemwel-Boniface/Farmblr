@@ -66,3 +66,12 @@ def validateUsername(request):
         if User.objects.filter(username=username).exists():
             return JsonResponse({"username_error": "Sorry, that username is taken"}, status=409)
         return JsonResponse({"username_valid": True})
+
+
+def validateMobile(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        phone_number = data['mobile']
+        if len(phone_number) > 9:
+            return JsonResponse({'mobile_error': "Enter a valid phone Number (9 digits)"})
+        return JsonResponse({"mobile_valid": True})
