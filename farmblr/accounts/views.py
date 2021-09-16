@@ -1,7 +1,10 @@
+import json
+import re
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout as django_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.http import JsonResponse
 
 from .forms import LoginForm, CreateUser
 
@@ -49,3 +52,17 @@ def sign_up(request):
         "sign_up": sign_up_,
     }
     return render(request, 'accounts/signup.html', context)
+
+
+def validateUsername(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        username = data['username']
+        pattern = re.compile('[^a-zA-Z0-9@\+.\-_]+')
+        if bool(re.search(pattern, username)):
+            return JsonResponse({'username_error': "Only alphanumeric characters, @, ., +, -,  _ allowed"}, status=400)
+        if len(username) > 150:
+            return JsonResponse({'username_error': "Username should be 150 characters or fewer in length"})
+        if User.objects.filter(username=username).exists():
+            return JsonResponse({"username_error": "Sorry, that username is taken"}, status=409)
+        return JsonResponse({"username_valid": True})
