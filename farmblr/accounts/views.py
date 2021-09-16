@@ -75,3 +75,12 @@ def validateMobile(request):
         if len(phone_number) > 9:
             return JsonResponse({'mobile_error': "Enter a valid phone Number (9 digits)"})
         return JsonResponse({"mobile_valid": True})
+
+
+def validateEmail(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        email = data['email']
+        if User.objects.filter(email=email).exists():
+            return JsonResponse({'email_error': "Email Already in Use"}, status=409)
+        return JsonResponse({"email_valid": True})
