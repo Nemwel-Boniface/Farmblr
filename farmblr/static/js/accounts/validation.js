@@ -49,3 +49,26 @@ email_input.addEventListener('keyup', (e) => {
         });
     }
 });
+
+/* Passwords validation */
+password2_input.addEventListener('keyup', (e) => {
+    const password2Value = e.target.value;
+    const password1Value = password1_input.value;
+    if (password2Value.length > 0){
+        fetch("/accounts/validatePassword", {
+            body: JSON.stringify({ password1: password1Value, password2: password2Value }),
+            method: "POST",
+        })
+            .then((res)=>res.json())
+            .then((data) => {
+            if(data.password_error){
+                password2_input.classList.add("invalid");
+                passwords_error_area.style.display = 'block';
+                passwords_error_area.innerHTML = `<p>${data.password_error}</p>`
+            }else{
+                password2_input.classList.remove('invalid')
+                passwords_error_area.style.display = 'none';
+            }
+        });
+    }
+});
