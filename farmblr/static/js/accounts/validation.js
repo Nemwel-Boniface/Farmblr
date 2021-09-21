@@ -27,3 +27,25 @@ username_input.addEventListener('keyup', (e) => {
         });
     }
 });
+
+/* Email Validation */
+email_input.addEventListener('keyup', (e) => {
+    const emailValue = e.target.value;
+    if (emailValue.length > 0){
+        fetch("/accounts/validateEmail", {
+            body: JSON.stringify({ email: emailValue }),
+            method: "POST",
+        })
+            .then((res)=>res.json())
+            .then((data) => {
+            if(data.email_error){
+                email_input.classList.add("invalid");
+                email_error_area.style.display = 'block';
+                email_error_area.innerHTML = `<p>${data.email_error}</p>`
+            }else {
+                email_input.classList.remove('invalid')
+                email_error_area.style.display = 'none';
+            }
+        });
+    }
+});
