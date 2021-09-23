@@ -1,8 +1,14 @@
+from datetime import date
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
+
+
+def calculate_age(born):
+    today = date.today()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
 
 
 class LoginForm(forms.Form):
@@ -44,3 +50,40 @@ class CreateUser(UserCreationForm):
         if email_qs:
             self.errors['email'] = self.error_class(["This email is already registered"])
         return super(CreateUser, self).clean(*args, **kwargs)
+
+
+class CreateProfile(forms.ModelForm):
+    COUNTRIES = (
+        ("Kenya", "Kenya"),
+    )
+    COUNTRY_CODES = (
+        ("254", "+254"),
+    )
+    country_code = forms.ChoiceField(choices=COUNTRY_CODES)
+    country = forms.ChoiceField(choices=COUNTRIES)
+    postal_code = forms.CharField(required=False, widget=forms.TextInput(attrs={"placeholder": 'Postal Code'}))
+    street = forms.CharField(max_length=150, required=False, widget=forms.TextInput(attrs={"Placeholder": 'Street'}))
+    city = forms.CharField(max_length=150, required=False, widget=forms.TextInput(attrs={"Placeholder": 'city'}))
+    profile_picture = forms.ImageField(required=False)
+    date_of_birth = forms.DateField(widget=forms.DateInput(attrs={"type": 'date'}))
+    id_number = forms.IntegerField(widget=forms.NumberInput(attrs={"placeholder": ' National Id/Passport Number'}))
+    mobile = forms.CharField(max_length=9, widget=forms.NumberInput(attrs={"placeholder": "Phone No. Eg. 712345678"}))
+
+    class Meta:
+        model = Profile
+        fields = ['gender', 'date_of_birth', 'id_number',
+                  'country', 'country_code', 'mobile', 'street', 'city', 'postal_code']
+
+    def clean(self, *args, **kwargs):
+        # Confirm age > 18
+        age = calculate_age(self.cleaned_data.get('date_of_birth'))
+        if age < 18:
+            self.errors['date_of_birth'] = self.error_class(["You are too Young!!!"])
+        # check that phone number is valid
+        mobile = self.cleaned_data.get('mobile')
+        if not str(mobile).isdecimal():
+            self.errors['mobile'] = self.error_class(['Enter only numbers (0 - 9) '])
+        #  Merge country code with the mobile number
+        mobile = str(self.cleaned_data.get("country_code")) + str(self.cleaned_data.get('mobile'))
+        self.cleaned_data['mobile'] = mobile
+        return super(CreateProfile, self).clean(*args, **kwargs)
