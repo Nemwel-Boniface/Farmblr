@@ -84,3 +84,13 @@ def validateEmail(request):
         if User.objects.filter(email=email).exists():
             return JsonResponse({'email_error': "Email Already in Use"}, status=409)
         return JsonResponse({"email_valid": True})
+
+
+def validatePassword(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        password1 = data['password1']
+        password2 = data['password2']
+        if str(password1) != str(password2):
+            return JsonResponse({'password_error': "The two passwords don't match"})
+        return JsonResponse({"password_match": True})
