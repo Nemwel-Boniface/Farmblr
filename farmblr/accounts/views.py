@@ -6,7 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 
-from .forms import LoginForm, CreateUser
+from .forms import LoginForm, CreateUser, CreateProfile
+from .models import Profile
 
 
 # Create your views here.
@@ -94,3 +95,31 @@ def validatePassword(request):
         if str(password1) != str(password2):
             return JsonResponse({'password_error': "The two passwords don't match"})
         return JsonResponse({"password_match": True})
+
+
+@login_required
+def profile(request, username):
+    profile_ = CreateProfile(request.POST or None)
+    user = User.objects.get(username=username)
+    if request.user != user:
+        return redirect(login_)
+    if profile_.is_valid():
+        gender = profile_.cleaned_data.get('gender')
+        date_of_birth = profile_.cleaned_data.get('date_of_birth')
+        id_number = profile_.cleaned_data.get('id_number')
+        mobile = profile_.cleaned_data.get('mobile')
+        country = profile_.cleaned_data.get('country')
+        street = profile_.cleaned_data.get('street')
+        city = profile_.cleaned_data.get('city')
+        postal_code = profile_.cleaned_data.get('postal_code')
+        profile_picture = request.FILES.get('profile_picture')
+
+        profile_ = Profile.objects.create(user=user, id_number=id_number, country=country, street=street,
+                                          date_of_birth=date_of_birth, gender=gender, mobile=mobile,
+                                          city=city, postal_code=postal_code, profile_picture=profile_picture)
+        profile_.save()
+        return redirect('/marketplace/')
+    context = {
+        "profile": profile_,
+    }
+    return render(request, 'accounts/profile.html', context)
