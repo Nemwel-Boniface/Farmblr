@@ -18,3 +18,15 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class Cart(models.Model):
+    product = models.ForeignKey('products.Product', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '{} '.format(self.product)
+
+    class Meta:
+        verbose_name_plural = "Cart"
