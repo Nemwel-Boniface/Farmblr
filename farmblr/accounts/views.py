@@ -7,7 +7,9 @@ from django.contrib.auth.models import User
 from django.http import JsonResponse
 
 from .forms import LoginForm, CreateUser, CreateProfile
-from .models import Profile
+from .models import Profile, Cart
+
+from ..products.models import Product
 
 
 # Create your views here.
@@ -123,3 +125,12 @@ def profile(request, username):
         "profile": profile_,
     }
     return render(request, 'accounts/profile.html', context)
+
+
+def add_to_cart(request, id):
+    if not request.user.is_authenticated:
+        return redirect(login_)
+    product = Product.objects.get(id=id)
+    new_product = Cart.objects.create(product=product, user=request.user)
+    new_product.save()
+    return redirect('products')
