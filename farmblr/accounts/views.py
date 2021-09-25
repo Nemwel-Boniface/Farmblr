@@ -134,3 +134,9 @@ def add_to_cart(request, id):
     new_product = Cart.objects.create(product=product, user=request.user)
     new_product.save()
     return redirect('products')
+
+
+@login_required
+def delete_cart(request, id):
+    Cart.objects.get(product=id).delete()
+    return redirect('products')
