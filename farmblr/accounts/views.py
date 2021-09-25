@@ -9,7 +9,7 @@ from django.http import JsonResponse
 from .forms import LoginForm, CreateUser, CreateProfile
 from .models import Profile, Cart
 
-from ..products.models import Product
+from products.models import Product
 
 
 # Create your views here.
