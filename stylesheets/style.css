@@ -6,6 +6,14 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+}
 h2
 {
     font-size: 25px;
@@ -19,7 +27,31 @@ p
 
 /*Styling for the landing page begins here*/
 
+/*the top nav bar*/
+.top-nav-bar .logo
+{
+    margin: 0 70% 0 2%;
+}
+.top-nav-bar .logo img
+{
+    max-width: 100%;
+}
+.top-nav-bar-links ul  li
+{
+    display: block;
+    margin: 10px 30px 10px 30px;
+    
+}
+.top-nav-bar-links ul li a
+{
+    text-decoration: none;
+}
 
+
+.top-nav-bar .toggle-menu a
+{
+    display: inline-block;
+}
 
 
 
