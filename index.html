@@ -40,8 +40,22 @@
     <body>
         
         <!--The markup for the landing page begins here-->
-        
-        <section class="landing-page">
+        <section class="landing-page" id="landing">
+           
+           <!-- top social media icons -->
+
+           <div class="nav-bar-icons">
+               <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+           
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+           
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+           
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+           
+              <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+           
+           </div> 
             
             <!--The top navigation bar first-->
             
@@ -49,7 +63,7 @@
                 <div class="logo">
                     <img src="Images/farmbirlogo.jpeg" alt="farmblrlogo">
                 </div>
-                <div class="top-nav-bar-links">
+                <div class="top-nav-bar-links" id="navbar">
                     <ul>
                         <li><a href="#">Farmblr for business</a></li>
                         <li><a href="#">Shop</a></li>
@@ -58,8 +72,8 @@
                         <li><a href="#" class="bordered">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                <div class="toggle-menu">
-                    <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                <div class="toggle-menu" id="menubtn">
+                    <img src="images/menu.png" id="menu" onclick="topNavFunction()">
                 </div>
                 
             </div>
@@ -70,7 +84,32 @@
         <!--scripts for the page now-->
         
         <script>
-        
+        /*top navigation bar*/
+            
+            navbar.style.display = 'none';
+            closemenu.style.display = 'none';
+            menu.style.display = 'block';
+            
+            function topNavFunction()
+            {
+                 var menubtn = document.getElementById('menubtn');
+                 var navbar = document.getElementById('navbar');
+                 var menu = document.getElementById('menu');
+                
+                if(navbar.style.display == 'none' )
+                    {
+                        navbar.style.display = 'block';
+                        menu.src = 'images/close.png';   
+                    }
+                else
+                    {
+                        navbar.style.display = 'none';
+                        menu.src = 'images/menu.png';
+                    }
+            }
+            
+           
+            
         </script>
     </body>
 </html>
