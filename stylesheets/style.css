@@ -1,4 +1,4 @@
-/*This css file styles completely the top part which includes, logo, navbar links, background photo, and headings of the farmblr landing page. was designed using the mobile first approach. */
+/*This csss file styles completely the top part which includes, logo, navbar links, background photo, and headings of the farmbir landing page. was designed using the mobile first approach. */
 
 *{
     margin: 0;
@@ -26,6 +26,30 @@ p
 }
 
 /*Styling for the landing page begins here*/
+/*Let's put a background photo to our landing page*/
+.landing-page
+{
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("images/farmproducts.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+    
+}
+
+/*the top nav bar social media icons*/
+.nav-bar-icons
+{
+    width: 100%;
+    background: #369432;
+    text-align: center;
+}
+.nav-bar-icons i
+{
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+}
 
 /*the top nav bar*/
 .top-nav-bar .logo
@@ -36,24 +60,63 @@ p
 {
     max-width: 100%;
 }
+.top-nav-bar-links
+{
+    background: #fff;
+}
 .top-nav-bar-links ul  li
 {
     display: block;
     margin: 10px 30px 10px 30px;
+    padding: 10px;
     
 }
 .top-nav-bar-links ul li a
 {
     text-decoration: none;
+    color: #369432;
+    font-size: 18px;
 }
-
-
-.top-nav-bar .toggle-menu a
+.top-nav-bar-links ul li a:hover
 {
-    display: inline-block;
+    color: #00458b;
 }
 
+/*
+.top-nav-bar .toggle-menu  
+{
+    position: absolute;
+    top: 14%;
+    right: 10%;
+}
+.top-nav-bar .toggle-menu a 
+{
+    color: #000;
+    font-size: 26px;
+}
+.top-nav-bar .toggle-menu a:hover 
+{
+    color: #00458b;
+}*/
 
+#menubtn
+{
+   width: 40px;
+    height: 40px;
+    background: #369432;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 75px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+#menubtn img
+{
+    width: 20px;
+    margin-top: 12px;
+}
 
 
 
