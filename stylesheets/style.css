@@ -29,7 +29,7 @@ p
 /*Let's put a background photo to our landing page*/
 .landing-page
 {
-     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("images/farmproducts.jpg");
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducts.jpg");
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -50,16 +50,27 @@ p
     color: #fff;
     font-size: 20px;
 }
+.top-contact a
+{
+    text-decoration: none;
+    color: #fff;
+}
 
 /*the top nav bar*/
+/*logo*/
+.logo
+{
+    
+}
 .top-nav-bar .logo
 {
+    background-image: url(../images/farmbirlogo.png); 
+    background-size: cover;
+    background-position: center;
     margin: 0 70% 0 2%;
+    z-index: 5;
 }
-.top-nav-bar .logo img
-{
-    max-width: 100%;
-}
+
 .top-nav-bar-links
 {
     background: #fff;
@@ -107,7 +118,7 @@ p
     text-align: center;
     position: fixed;
     right: 30px;
-    top: 75px;
+    top: 110px;
     border-radius: 3px;
     z-index: 3;
     cursor: pointer;
@@ -121,7 +132,61 @@ p
 
 
 
-
+/*Responsive design now*/
+@media screen and (min-width: 73em)
+{
+    .landing-page
+{
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducts.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+   /*top socials and contact bar*/
+    .nav-bar-icons
+    {
+        display: flex;
+        text-align: center;
+    }
+    .nav-bar-icons .top-socials
+    {
+        margin-left: 32%;
+    }
+    .nav-bar-icons .top-contact
+    {
+        margin-left: 15%;
+    }
+    
+    #menubtn
+    {
+        display: none;
+    }
+    .top-nav-bar 
+    {
+        display: block;
+    }
+    .top-nav-bar-links
+    {
+      background: transparent;  
+      margin-left: 35%;    
+    }
+    .top-nav-bar .top-nav-bar-links ul li
+    {
+        display: inline-block;
+    }
+    .top-nav-bar .top-nav-bar-links ul li a
+    {
+        color: #fff;
+        font-size: 20px;
+    }
+    .top-nav-bar .top-nav-bar-links ul li a:hover
+    {
+        border-bottom: 3px solid #fff; 
+    }
+    
+}
 
 
 
