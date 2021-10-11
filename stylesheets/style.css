@@ -67,8 +67,13 @@ p
     background-image: url(../images/farmbirlogo.png); 
     background-size: cover;
     background-position: center;
-    margin: 0 70% 0 2%;
     z-index: 5;
+    margin: 0 69% 10px 4%;
+}
+.top-nav-bar .logo img
+{
+    
+    max-width: 100%;
 }
 
 .top-nav-bar-links
@@ -118,7 +123,7 @@ p
     text-align: center;
     position: fixed;
     right: 30px;
-    top: 110px;
+    top: 130px;
     border-radius: 3px;
     z-index: 3;
     cursor: pointer;
