@@ -1,132 +1,179 @@
-/*this stylesheet contains all the styling for the landing page*/
+/*This csss file styles completely the top part which includes, logo, navbar links, background photo, and headings of the farmbir landing page. was designed using the mobile first approach. */
 
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
-li {
-    list-style: none;
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
-a {
-    text-decoration: none;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    /*background: #009688;*/
-    height: 80px;
-}
-
-.hamburger {
-    display: none;
+/*Styling for the landing page begins here*/
+/*Let's put a background photo to our landing page*/
+.landing-page
+{
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducts.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    
 }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #fff;
+/*the top nav bar social media icons*/
+.nav-bar-icons
+{
+    width: 100%;
+    background: #369432;
+    text-align: center;
 }
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-item {
-    margin-left: 5rem;
-}
-
-.nav-link{
-    font-size: 17px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    padding:  10px;
-    border-radius: 3px;
-}
-
-.nav-link:hover{
-   border-bottom: 1px solid #fff;
-}
-
-.nav-logo {
+.nav-bar-icons i
+{
+    padding: 15px;
     color: #fff;
+    font-size: 20px;
+}
+.top-contact a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*The landing middle description and links*/
+.landing-description
+{
+    color: #fff;
+    text-align: center;
+    margin: 25px 20px 15px 20px; 
+}
+.landing-desc-heading
+{
+    margin-bottom: 40px;
     font-size: 30px;
 }
-
-
-@media only screen and (max-width: 1240px) {
-    .nav-logo {
-    font-size: 23px;
-    font-weight: 500;
-    color: white;
-    
-}
-    .nav-link{
-    font-size: 13px;
-    color: white;
-    text-transform: uppercase;
-    padding: 7px;
-}
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background-color: #369432;
-        width: 35%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        color: white;
-    }
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-}
-section img
+.landing-desc-heading h2
 {
-  /*background: url(pic%20pallete.png) no-repeat;*/
-    background-repeat: no-repeat;
-  background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 550px;
-    
-  /*height: calc(100vh - 80px);*/
+    font-size: 30px;
 }
+.landing-desc-links
+{
+    margin-top: 20px;
+}
+.landing-desc-links ul li
+{
+    list-style-type: none;
+    margin-bottom: 35px;
+    
+}
+.landing-desc-links a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    border: 0.5px solid #fff;
+    padding: 8px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+.landing-desc-links a span
+{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #369432;
+    z-index: -1;
+    transition: 0.5s;
+}
+.landing-desc-links a:hover span
+{
+    width: 100%;
+}
+.landing-desc-links a:hover
+{
+    color: #fff;
+}
+
+
+
+/*Responsive design now*/
+@media screen and (min-width: 73em)
+{
+   /*top socials and contact bar*/
+    .nav-bar-icons
+    {
+        display: flex;
+        text-align: center;
+    }
+    .nav-bar-icons .top-socials
+    {
+        margin-left: 32%;
+    }
+    .nav-bar-icons .top-contact
+    {
+        margin-left: 15%;
+    }
+    
+    /*The landing description now*/
+    .landing-description
+    {
+        margin: 100px 50px 45px 50px;
+    }
+    .landing-desc-heading 
+    {
+        margin: 45px 50px 55px 50px;
+    }
+    .landing-desc-heading h2
+    {
+        font-size: 63px;
+    }
+    .landing-desc-links
+    {
+        margin: 50px auto;
+        text-align: center;
+    }
+    
+    .landing-desc-links ul li
+    {
+        margin-left: 15px;
+        display: inline-block;
+    }
+    .landing-desc-links ul li a
+    {
+        font-size: 21px;
+    }
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
