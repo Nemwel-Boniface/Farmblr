@@ -1,0 +1,136 @@
+/*This css file styles completely the who are we section. was designed using the desktop first approach. */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*actual page styling starts here*/
+
+.supplytous
+{
+    margin: 60px 0 60px 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducetransorted.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+.supplyheading
+{
+    padding: 10px;
+}
+.supplyheading h2
+{
+    margin: 70px 25px 30px 25px;;
+    text-align: center;
+    font-size: 29px;
+    color: #fff;
+    padding: 10px;
+}
+.supplylinks
+{
+    text-align: center;
+    padding: 17px;
+}
+.supplylinks ul li
+{
+    list-style-type: none;
+    margin-bottom: 35px;
+}
+.supplylinks ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    border: 0.5px solid #fff;
+    padding: 8px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+.supplylinks ul li a span
+{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #369432;
+    z-index: -1;
+    transition: 0.5s;
+}
+.supplylinks ul li a:hover span
+{
+    width: 100%;
+}
+.supplylinks ul li a:hover 
+{
+    color: #fff;
+}
+
+
+/*responsive design*/
+@media screen and (min-width: 73em)
+{
+    .supplyheading h2
+     {
+         margin: 145px 50px 60px 50px;;
+         font-size: 55px;
+         
+     }
+    .supplylinks ul li
+    {
+        display: inline-block;
+        margin-left: 15px;
+        
+    }
+    .supplylinks ul li a
+    {
+        font-size: 19px;
+        padding: 10px;
+        
+    }
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
