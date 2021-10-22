@@ -1,0 +1,113 @@
+/*This css file styles completely the who are we section. was designed using the desktop first approach. */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*actual page styling starts here*/
+.whoarewe
+{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+#container
+{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left
+{
+    width: 50%;
+    height: 600px;
+    background: url(../images/whoarewe.jpg)  no-repeat center / cover;
+    border-radius: 9px;
+}
+.right
+{
+    width: 50%;
+    min-height: 400px;
+    background:  #369432;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 9px;
+    color: #fff;
+    margin-left: -80px;
+}
+.right h1
+{
+    font-size: 42px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.right p
+{
+    margin-bottom:  20px;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 770px)
+{
+   #container
+    {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+    .left
+    {
+        width: 100%;
+        height: 500px;
+    }
+    .right
+    {
+        width: 80%;
+        margin: 0;
+        margin-top: -100px;
+    }
+    .right h1
+    {
+       font-size: 30px;
+       padding: 10px;
+    }
+    .right p
+    {
+        font-size: 15px;
+        margin-bottom:  20px;
+        line-height: 25px;
+    } 
+}
+
+
