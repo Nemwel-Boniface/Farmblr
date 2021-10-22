@@ -1,204 +1,132 @@
-/*This csss file styles completely the top part which includes, logo, navbar links, background photo, and headings of the farmbir landing page. was designed using the mobile first approach. */
+/*this stylesheet contains all the styling for the landing page*/
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-html, body {
-  overflow-x: hidden;
-} 
-body
-{
-  background: #fff;
-    position: relative;
-}
-h2
-{
-    font-size: 25px;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-}
-p
-{
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+
+li {
+    list-style: none;
 }
 
-/*Styling for the landing page begins here*/
-/*Let's put a background photo to our landing page*/
-.landing-page
-{
-     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducts.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    width: 100%;
-    
-}
-
-/*the top nav bar social media icons*/
-.nav-bar-icons
-{
-    width: 100%;
-    background: #369432;
-    text-align: center;
-}
-.nav-bar-icons i
-{
-    padding: 15px;
-    color: #fff;
-    font-size: 20px;
-}
-.top-contact a
-{
+a {
     text-decoration: none;
-    color: #fff;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    /*background: #009688;*/
+    height: 80px;
 }
 
-/*the top nav bar*/
-/*logo*/
-.logo
-{
-    
-}
-.top-nav-bar .logo
-{
-    background-image: url(../images/farmbirlogo.png); 
-    background-size: cover;
-    background-position: center;
-    z-index: 5;
-    margin: 0 69% 10px 4%;
-}
-.top-nav-bar .logo img
-{
-    
-    max-width: 100%;
+.hamburger {
+    display: none;
 }
 
-.top-nav-bar-links
-{
-    background: #fff;
-}
-.top-nav-bar-links ul  li
-{
+.bar {
     display: block;
-    margin: 10px 30px 10px 30px;
-    padding: 10px;
-    
-}
-.top-nav-bar-links ul li a
-{
-    text-decoration: none;
-    color: #369432;
-    font-size: 18px;
-}
-.top-nav-bar-links ul li a:hover
-{
-    color: #00458b;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
 }
 
-/*
-.top-nav-bar .toggle-menu  
-{
-    position: absolute;
-    top: 14%;
-    right: 10%;
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.top-nav-bar .toggle-menu a 
-{
-    color: #000;
-    font-size: 26px;
-}
-.top-nav-bar .toggle-menu a:hover 
-{
-    color: #00458b;
-}*/
 
-#menubtn
-{
-   width: 40px;
-    height: 40px;
-    background: #369432;
-    text-align: center;
-    position: fixed;
-    right: 30px;
-    top: 130px;
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    padding:  10px;
     border-radius: 3px;
-    z-index: 3;
-    cursor: pointer;
-}
-#menubtn img
-{
-    width: 20px;
-    margin-top: 12px;
 }
 
+.nav-link:hover{
+   border-bottom: 1px solid #fff;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 30px;
+}
 
 
-
-/*Responsive design now*/
-@media screen and (min-width: 73em)
-{
-    .landing-page
-{
-     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducts.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
+@media only screen and (max-width: 1240px) {
+    .nav-logo {
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
     
 }
-   /*top socials and contact bar*/
-    .nav-bar-icons
-    {
-        display: flex;
+    .nav-link{
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
+    padding: 7px;
+}
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: #369432;
+        width: 35%;
         text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
     }
-    .nav-bar-icons .top-socials
-    {
-        margin-left: 32%;
+
+    .nav-menu.active {
+        left: 0;
     }
-    .nav-bar-icons .top-contact
-    {
-        margin-left: 15%;
+
+    .nav-item {
+        margin: 2.5rem 0;
     }
-    
-    #menubtn
-    {
-        display: none;
-    }
-    .top-nav-bar 
-    {
+
+    .hamburger {
         display: block;
+        cursor: pointer;
+        color: white;
     }
-    .top-nav-bar-links
-    {
-      background: transparent;  
-      margin-left: 35%;    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
     }
-    .top-nav-bar .top-nav-bar-links ul li
-    {
-        display: inline-block;
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
     }
-    .top-nav-bar .top-nav-bar-links ul li a
-    {
-        color: #fff;
-        font-size: 20px;
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
-    .top-nav-bar .top-nav-bar-links ul li a:hover
-    {
-        border-bottom: 3px solid #fff; 
-    }
-    
+
 }
-
-
-
-
-
-
-
-
-
-
+section img
+{
+  /*background: url(pic%20pallete.png) no-repeat;*/
+    background-repeat: no-repeat;
+  background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+    
+  /*height: calc(100vh - 80px);*/
+}
