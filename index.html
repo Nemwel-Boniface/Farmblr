@@ -9,7 +9,7 @@
         <!--Stylesheets-->
         
         <link rel="stylesheet" href="stylesheets/style.css">
-        <link rel="stylesheet" href="stylesheets/">
+        <link rel="stylesheet" href="stylesheets/responsivetopnavigationbar.css">
         <link rel="stylesheet" href="stylesheets/">
         <link rel="stylesheet" href="stylesheets/">
         <link rel="stylesheet" href="stylesheets/">
@@ -64,24 +64,46 @@
             
             <!--The top navigation bar first-->
             
-            <div class="top-nav-bar">
-                <div class="logo">
-                    <img src="images/farmbirlogo.png">
+            <header class="header">
+                <nav class="navbar">
+                    <a href="#" class="nav-logo" id="home">Farmblr</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                        <a href="#" class="nav-link">Farmblr for business</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link">Log In <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </header>
+            
+            <div class="landing-description">
+                <div class="landing-desc-heading">
+                    <h2>Shop fresh house hold groceries and have them delivered to your doorstep.</h2>
                 </div>
-                <div class="top-nav-bar-links" id="navbar">
+                <div class="landing-desc-links">
                     <ul>
-                        <li><a href="#">Farmblr for business</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#" class="bordered">Log In <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
-                        <li><a href="#" class="bordered">Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><span></span>About Us</a></li>
+                        <li><a href="#"><span></span>Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="toggle-menu" id="menubtn">
-                    <img src="images/menu.png" id="menu" onclick="topNavFunction()">
-                </div>
-                
             </div>
+            
             
         </section>
         
@@ -89,32 +111,25 @@
         <!--scripts for the page now-->
         
         <script>
-        /*top navigation bar*/
-            
-            navbar.style.display = 'none';
-            closemenu.style.display = 'none';
-            menu.style.display = 'block';
-            
-            function topNavFunction()
-            {
-                 var menubtn = document.getElementById('menubtn');
-                 var navbar = document.getElementById('navbar');
-                 var menu = document.getElementById('menu');
-                
-                if(navbar.style.display == 'none' )
-                    {
-                        navbar.style.display = 'block';
-                        menu.src = 'images/close.png';   
-                    }
-                else
-                    {
-                        navbar.style.display = 'none';
-                        menu.src = 'images/menu.png';
-                    }
-            }
-            
-           
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
             
         </script>
+        
     </body>
 </html>
