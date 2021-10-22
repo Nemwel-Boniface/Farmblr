@@ -1,0 +1,132 @@
+/*this stylesheet contains all the styling for the landing page*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    /*background: #009688;*/
+    height: 80px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    padding:  10px;
+    border-radius: 3px;
+}
+
+.nav-link:hover{
+   border-bottom: 1px solid #fff;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 30px;
+}
+
+
+@media only screen and (max-width: 1240px) {
+    .nav-logo {
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    
+}
+    .nav-link{
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
+    padding: 7px;
+}
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: #369432;
+        width: 35%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        color: white;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+section img
+{
+  /*background: url(pic%20pallete.png) no-repeat;*/
+    background-repeat: no-repeat;
+  background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+    
+  /*height: calc(100vh - 80px);*/
+}
