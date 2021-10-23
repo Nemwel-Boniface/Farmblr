@@ -32,7 +32,7 @@ p
 /*why choose us styling plus header section*/
 .whychooseus
 {
-    margin: 60px 20px 60px 20px;
+    margin: 80px 20px 60px 20px;
     background-color: #fff;
 }
 .whychooseus-heading
@@ -93,31 +93,79 @@ p
     font-size: 18px;
 }
 
+/*add styling to make the lower img fit well*/
+.whychooseus-right
+{
+ border-top: 45px;   
+}
+.whychooseus-right img
+{
+    max-width: 100%;
+    height: 55vh;
+    border-radius: 9px;
+}
+
 
 /*responsive design now*/
 @media screen and (min-width: 73em )
 {
+    .whychooseus
+    {
+        margin: 90px 110px 70px 100px; 
+    }
+    
+    
+    /*first style the heading section*/
+    .whychooseus-heading
+    {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .whychooseus-heading h2
+    {
+        font-size: 56px;
+    }
+    .whychooseus-heading hr
+    {
+        margin: 0 auto;
+        color: #369432;
+        border-bottom: 1.9px solid #369432;
+        width: 25%;
+    }
+    
+    /*flex the two sections. left and right*/
+    .whychooseusdetails
+    {
+        display: flex;
+    }
+    
+    .whychooseus-right
+    {
+        margin: auto 0 auto 40px;
+        
+    }
+    
+    /*the reasons styling*/
+    .reason h2
+    {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .reason-icon i
+    {
+        padding: 11px;
+        border: 1px solid #369432;
+        font-size: 32px;
+        border-radius: 8px;
+    }
+    .reason-desc p
+    {
+        margin-left: 19px;
+        font-size: 19px;
+    }    
+    
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
