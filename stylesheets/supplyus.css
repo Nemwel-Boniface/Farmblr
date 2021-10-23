@@ -34,7 +34,7 @@ p
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducetransorted.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
 }
 .supplyheading
@@ -43,7 +43,7 @@ p
 }
 .supplyheading h2
 {
-    margin: 70px 25px 30px 25px;;
+    margin: 55px 25px 30px 25px;;
     text-align: center;
     font-size: 29px;
     color: #fff;
