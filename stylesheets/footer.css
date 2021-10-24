@@ -1,0 +1,198 @@
+/*This css file styles completely the Farmblr footerr section section. was designed using the mobile first approach. */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+    font-size: 17px;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*actual page styling starts here*/
+.footer
+{
+    background: #f1f5f7;
+}
+.footer-items
+{
+    margin: 100px 20px 0 20px;
+    padding-top: 35px;
+}
+.fheading
+{
+    margin: 35px 0 25px 0;
+}
+.fheading h2
+{
+    margin: 0 0 15px 0;
+    color: #369432;
+    text-align: center;
+    font-size: 30px;
+}
+.fheading hr
+{
+    border-bottom: 4px solid #369432;
+    width: 40%;
+    margin: 0 auto 0 auto;
+}
+.top-left-desc hr
+{
+    border-bottom: 4px solid #369432;
+    width: 45%;
+    margin-top: 25px;
+}
+
+/*the middle left section styling*/
+.middle-left-links ul li
+{
+    list-style-type: none;
+    padding-bottom: 11px;
+}
+.middle-left-links ul li a
+{
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+    font-size: 17px;
+}
+.middle-left-links ul li a:hover
+{
+    color: #369432;
+}
+.middle-left-links ul li a i
+{
+    margin-left: 8px;
+    font-size: 19px;
+}
+
+/*The middle right section now*/
+.middle-right-desc p
+{
+    font-size: 17px;
+    padding-bottom: 11px;
+}
+.middle-right-desc a
+{
+    color: #fff;
+    padding: 10px;
+    background: #369432;
+    border-radius: 8px;
+    font-size: 17px;
+    margin-top: 11px;
+    transition: 0.5s;
+}
+.middle-right-desc a:hover
+{
+    background: #000;
+}
+
+/*top right section now*/
+.top-right-links
+{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.top-right-links a
+{
+    font-size: 20px;
+    margin-left: 15px;
+    color: #000;
+    transition: 0.5s;
+}
+.top-right-links a:hover
+{
+    color: #369432;
+}
+
+/*author info details*/
+.footer-authordetails
+{
+    padding: 40px 20px 40px 20px;
+}
+.footer-authordetails p
+{
+    font-size: 17px;
+}
+.footer-authordetails i
+{
+    font-size: 20px;
+    color: red;
+    margin: 0 10px;
+}
+.footer-authordetails a
+{
+    text-decoration: none;
+    color: #369432;
+    transition: 0.5s;
+}
+.footer-authordetails a:hover
+{
+    color: #000;
+}
+
+/*responsive design now*/
+@media screen and (min-width: 73em )
+{
+    /*flex the footer sections*/
+    .footer-items
+    {
+        display: flex;
+    }
+    .ft
+    {
+        flex: 1;
+    }
+    .middle-left ul li
+    {
+        margin-left: 40px;
+    }
+    
+    /*make the author details center*/
+    .footer-authordetails
+    {
+        text-align: center;
+    }
+    .footer-authordetails p
+    {
+        font-size: 19px;
+    }
+    .footer-authordetails p i
+    {
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
