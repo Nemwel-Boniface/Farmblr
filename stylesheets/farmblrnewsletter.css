@@ -1,0 +1,127 @@
+/*This css file styles completely the Farmblr news letter section section. was designed using the mobile first approach. */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*actual page styling starts here*/
+
+.newsletter
+{
+    margin: 100px 20px 100px 20px;
+}
+.newsletter-cover
+{
+    border: 4px solid #000;
+    width: 100%;
+}
+.newsletter-heading
+{
+    padding: 15px;
+}
+.newsletter-heading h2
+{
+    color: #369432;
+    text-align: center;
+}
+.newsletter-form
+{
+    padding: 20px;
+    text-align: center;
+}
+.newsletter-form input
+{
+    height: 48px;
+    border: 1px solid #369432;
+    margin-bottom: 10px;
+}
+.newsletter-form button
+{
+    padding: 10px;
+    background: #369432;
+    color: #fff;
+    transition: 0.5s;
+}
+.newsletter-form button:hover
+{
+    background: #000;
+    color: #fff;
+}
+
+
+/*Responsive design now*/
+@media screen and (min-width: 73em )
+{
+    .newsletter
+    {
+        margin: 110px 75px 110px 75px;
+    }
+    .newsletter-heading h2
+    {
+        font-size: 35px;
+        padding: 18px;
+    }
+    .newsletter-form
+    {
+        padding: 30px;
+    }
+    .newsletter-form input
+    {
+        width: 35%;
+    }
+    .newsletter-form button
+    {
+        font-size: 19px;
+        padding: 12px;
+        margin-left: 15px;
+    }
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
