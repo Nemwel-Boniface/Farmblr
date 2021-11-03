@@ -54,7 +54,7 @@ p
 .newsletter-form input
 {
     height: 48px;
-    border: 1px solid #369432;
+    border: 1.4px solid #000;
     margin-bottom: 10px;
 }
 .newsletter-form button
@@ -102,26 +102,3 @@ p
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
