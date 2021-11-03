@@ -1,10 +1,11 @@
 /*This css file styles completely the Farm produces section section. was designed using the mobile first approach. */
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 html, body {
   overflow-x: hidden;
@@ -22,8 +23,9 @@ h2
 p
 {
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
+
 
 
 /*actual page styling starts here*/
