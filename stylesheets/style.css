@@ -1,6 +1,5 @@
 /*This csss file styles completely the top part which includes, logo, navbar links, background photo, and headings of the farmbir landing page. was designed using the mobile first approach. */
 
-
 *{
     margin: 0;
     padding: 0;
@@ -26,7 +25,6 @@ p
     font-family: 'Ubuntu', sans-serif;
 }
 
-
 /*Styling for the landing page begins here*/
 /*Let's put a background photo to our landing page*/
 .landing-page
@@ -34,9 +32,9 @@ p
      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducts.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 92vh;
     width: 100%;
-    
+    margin-bottom: 60px;
 }
 
 /*the top nav bar social media icons*/
@@ -169,13 +167,6 @@ p
     
     
 }
-
-
-
-
-
-
-
 
 
 
