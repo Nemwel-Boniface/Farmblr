@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 html, body {
   overflow-x: hidden;
@@ -23,7 +23,7 @@ h2
 p
 {
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -128,10 +128,12 @@ p
 .footer-authordetails
 {
     padding: 40px 20px 40px 20px;
+    
 }
 .footer-authordetails p
 {
     font-size: 17px;
+    margin: 0 auto;
 }
 .footer-authordetails i
 {
@@ -181,19 +183,6 @@ p
         font-size: 25px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
