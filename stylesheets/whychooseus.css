@@ -87,6 +87,10 @@ p
     font-size: 29px;
     border-radius: 8px;
 }
+.reason-desc
+    {
+        margin: auto 0;
+    }
 .reason-desc p
 {
     margin-left: 16px;
