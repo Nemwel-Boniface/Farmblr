@@ -158,15 +158,17 @@ p
         font-size: 32px;
         border-radius: 8px;
     }
+    .reason-desc
+    {
+        margin: auto 0;
+    }
     .reason-desc p
     {
         margin-left: 19px;
         font-size: 19px;
+        
     }    
     
     
 }
-
-
-
 
