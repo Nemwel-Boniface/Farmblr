@@ -23,3 +23,10 @@ class TestAccountViews(TestCase):
         self.client.login(username='test_user', password='test_password')
         response = self.client.get(reverse('logout'))
         self.assertEqual(response.status_code, 302)
+
+    def test_signup_POST_nodata(self):
+        """ Ensure no profile is created without data """
+        response = self.client.post(reverse('signup'))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(User.objects.count(), 1)  # first user already created for test purposes
+        self.assertEqual(Profile.objects.count(), 0)
