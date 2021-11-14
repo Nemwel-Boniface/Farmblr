@@ -30,3 +30,24 @@ class TestAccountViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(User.objects.count(), 1)  # first user already created for test purposes
         self.assertEqual(Profile.objects.count(), 0)
+
+    def test_signup_POST_clean_data(self):
+        sign_up_info = {
+            'first_name': 'First',
+            'last_name': 'Last',
+            'username': 'testUser',
+            'email': 'testUser@email.com',
+            'mobile': 70000000,
+            'date_of_birth': '2020-05-07',
+            'gender': 'Male',
+            'id_number': 123456,
+            'password1': 'some_password',
+            'password2': 'some_password',
+            'country': 'KE',
+            'city': 'Nairobi',
+            'street': 'Moi Avenue',
+            'postal_code': '900-02000'
+        }
+        response = self.client.post(reverse('signup'), sign_up_info)
+        # self.assertEqual(response.status_code, 302)
+        self.assertEqual(Profile.objects.count(), 1)
