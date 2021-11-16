@@ -13,4 +13,7 @@ urlpatterns = [
     path('delete_cart/<int:id>', views.delete_cart, name='delete_cart'),
     path('reset_password', auth_views.PasswordResetView.as_view(template_name='accounts/reset_password.html'),
          name='reset_password'),
+    path('password_reset_sent', auth_views.PasswordResetDoneView.as_view(template_name='accounts/password_reset_sent'
+                                                                                       '.html'),
+         name='password_reset_sent'),
 ]
