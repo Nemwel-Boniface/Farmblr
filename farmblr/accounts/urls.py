@@ -1,4 +1,6 @@
 from django.urls import path
+from django.contrib.auth import views as auth_views
+from django.views.decorators.csrf import csrf_exempt
 
 from . import views
 
@@ -9,4 +11,6 @@ urlpatterns = [
     path('profile/<slug:usernmae>', views.profile, name='profile'),
     path('add_to_cart/<int:id>', views.add_to_cart, name='add_to_cart'),
     path('delete_cart/<int:id>', views.delete_cart, name='delete_cart'),
+    path('reset_password', auth_views.PasswordResetView.as_view(template_name='accounts/reset_password.html'),
+         name='reset_password'),
 ]
