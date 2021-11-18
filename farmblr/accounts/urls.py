@@ -11,6 +11,7 @@ urlpatterns = [
     path('profile/<slug:usernmae>', views.profile, name='profile'),
     path('validateUsername', csrf_exempt(views.validateUsername), name="validateUsername"),
     path('validateEmail', csrf_exempt(views.validateEmail), name="validateEmail"),
+    path('validatePassword', csrf_exempt(views.validatePassword), name="validatePassword"),
     path('add_to_cart/<int:id>', views.add_to_cart, name='add_to_cart'),
     path('delete_cart/<int:id>', views.delete_cart, name='delete_cart'),
     path('reset_password', auth_views.PasswordResetView.as_view(template_name='accounts/reset_password.html'),
