@@ -29,10 +29,10 @@ p
 /*Let's put a background photo to our landing page*/
 .landing-page
 {
-     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproducts.jpg");
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../images/farmproduces.jpg");
     background-size: cover;
     background-position: center;
-    height: 92vh;
+    height: 75vh;
     width: 100%;
     margin-bottom: 60px;
 }
@@ -57,6 +57,12 @@ p
 }
 
 /*The landing middle description and links*/
+.nav-logo img
+{
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+}
 .landing-description
 {
     color: #fff;
@@ -72,45 +78,41 @@ p
 {
     font-size: 30px;
 }
-.landing-desc-links
+
+/*Form for call to action*/
+
+.landing-desc-form
 {
-    margin-top: 20px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
 }
-.landing-desc-links ul li
+.landing-desc-form i
 {
-    list-style-type: none;
-    margin-bottom: 35px;
-    
+    color: #000;
+    font-size: 22px;
 }
-.landing-desc-links a
+.landing-desc-form input
 {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    border: 0.5px solid #fff;
-    padding: 8px;
-    position: relative;
-    z-index: 1;
-    transition: color 0.5s;
+    border: 0;
+    font-size: 14px;
+    margin: auto auto;
 }
-.landing-desc-links a span
+.landing-desc-form .fa-search
 {
-    width: 0;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #369432;
-    z-index: -1;
-    transition: 0.5s;
+    margin-right: 6px;
 }
-.landing-desc-links a:hover span
+.landing-desc-form .fa-long-arrow-right
 {
-    width: 100%;
+    margin-left: 6px;
 }
-.landing-desc-links a:hover
+
+.signUp
 {
-    color: #fff;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    color: #000;
 }
 
 
@@ -133,7 +135,18 @@ p
         margin-left: 15%;
     }
     
+    /*nav logo*/
+    
+    .nav-logo img
+    {
+        width: 200px;
+        height: 150px;
+        margin-top: 60px;
+    }
+    
+    
     /*The landing description now*/
+    
     .landing-description
     {
         margin: 100px 50px 45px 50px;
@@ -146,27 +159,46 @@ p
     {
         font-size: 63px;
     }
-    .landing-desc-links
+    .landing-desc-form
     {
-        margin: 50px auto;
-        text-align: center;
+        width: 30%;
+        margin: 0 auto;
     }
     
-    .landing-desc-links ul li
+    .landing-desc-form i
     {
-        margin-left: 15px;
-        display: inline-block;
+        color: #000;
+        font-size: 25px;
     }
-    .landing-desc-links ul li a
+    .landing-desc-form input
     {
-        font-size: 21px;
+        border: 0;
+        font-size: 17px;
+        margin: auto auto;
     }
-    
-    
+    .landing-desc-form .fa-search
+    {
+        margin-right: 8px;
+    }
+    .landing-desc-form .fa-long-arrow-right
+    {
+        margin-left: 8px;
+        background: #369432;
+        color: #fff;
+        border-radius: 50%;
+        padding: 6px;
+    }
     
     
     
 }
+
+
+
+
+
+
+
 
 
 
