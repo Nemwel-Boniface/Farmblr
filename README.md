@@ -5,6 +5,9 @@ Official Farmblr Website
 Install python <br>
 clone the repository <br>
 open Terminal/ powershell on the root of the project <br>
+install virtualenv package - `pip install virtualenv` <br>
+create a virtual environment - `virtualenv env` <br>
+activate the virtual env `env\Scripts\activate` (for windows) <br>
 install dependencies - run `pip install -r requirements.txt` <br>
 change directory to farmblr  `cd farmblr`  <br>
 make migrations - `python manage.py makemigrations`  <br>
