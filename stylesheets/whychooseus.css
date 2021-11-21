@@ -1,6 +1,5 @@
 /*This css file styles completely the Why choose us section section. was designed using the mobile first approach. */
 
-
 *{
     margin: 0;
     padding: 0;
@@ -25,7 +24,6 @@ p
     font-size: 16px;
     font-family: 'Ubuntu', sans-serif;
 }
-
 
 
 /*actual page styling starts here*/
@@ -89,10 +87,6 @@ p
     font-size: 29px;
     border-radius: 8px;
 }
-.reason-desc
-    {
-        margin: auto 0;
-    }
 .reason-desc p
 {
     margin-left: 16px;
@@ -117,7 +111,7 @@ p
 {
     .whychooseus
     {
-        margin: 90px 110px 70px 100px; 
+        margin: 120px 110px 140px 100px; 
     }
     
     
@@ -140,11 +134,16 @@ p
     }
     
     /*flex the two sections. left and right*/
-    .whychooseusdetails
+    /*.whychooseusdetails
     {
         display: flex;
+    }*/
+    .whychooseus-left
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
     }
-    
     .whychooseus-right
     {
         margin: auto 0 auto 40px;
@@ -177,4 +176,26 @@ p
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
