@@ -1,4 +1,4 @@
-/*This csss file styles completely the register section including cards for the signin and sign up. was designed using the mobile first approach. */
+/*This csss file styles completely the five cards section. was designed using the mobile first approach. */
 
 *{
     margin: 0;
@@ -67,23 +67,33 @@ p
 /*responsive design now*/
 @media screen and (min-width: 73em)
 {
+    /*make them as grids of 3 per row*/
+    .fiveCards-main
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+    
+    /*other styling*/
+    .cards 
+    {
+        height: 79vh;
+    }
+    .cards img
+    {
+        max-width: 100%;
+        height: 55%;
+        padding: 35px 85px 35px 85px;
+    }
+    .card h2
+    {
+        margin: 0 0 26px 0;
+        font-size: 37px;
+    }
+    .card p
+    {
+        font-size: 20px;
+    }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
