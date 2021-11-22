@@ -91,32 +91,19 @@ p
     }
     .registryContent h2
     {
-        margin: 0 0 22px 0;
-        font-size: 35px;
+        margin: 0 0 26px 0;
+        font-size: 37px;
     } 
     .registryContent a
     {
-        font-size: 19px;
+        font-size: 22px;
+    }
+    .registryContent a i
+    {
+        font-size: 24px;
+        padding: 7.5px;
     }
     
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
