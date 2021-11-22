@@ -77,21 +77,21 @@ p
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
-        margin: 90px 220px 90px 220px;
+        margin: 90px 230px 90px 230px;
     }
     .registrydetails
     {
-        height: 79vh;
+        height: 69vh;
     }
     .registrydetails img
     {
         max-width: 100%;
-        height: 55%;
-        padding: 35px 85px 35px 85px;
+        height: 49%;
+        padding: 35px 90px 30px 90px;
     }
     .registryContent h2
     {
-        margin: 0 0 26px 0;
+        margin: 0 0 24px 0;
         font-size: 37px;
     } 
     .registryContent a
@@ -107,3 +107,5 @@ p
     
     
 }
+
+
