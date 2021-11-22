@@ -97,6 +97,7 @@ p
     border: 0;
     font-size: 14px;
     margin: auto auto;
+    height: 33px;
 }
 .landing-desc-form .fa-search
 {
@@ -120,6 +121,12 @@ p
 /*Responsive design now*/
 @media screen and (min-width: 73em)
 {
+    
+    .landing-page
+    {
+        height: 95vh;
+    }
+    
    /*top socials and contact bar*/
     .nav-bar-icons
     {
