@@ -70,7 +70,12 @@ p
 {
     padding-top: 30px;
     margin-left: 10px;
-    color: #000;
+    color: #369432;
+}
+
+.header-links ul
+{
+    margin-right: 8px;
 }
 .header-links ul li
 {
@@ -82,12 +87,22 @@ p
 .header-links ul li a
 {
     text-decoration: none;
-    color: #000;
-    padding: 10px;
+    color: #369432;
+    padding: 8px;
+    border: 1px solid #369432;
+    border-radius: 9px;
+    transition: .5s;
+}
+.header-links ul li a:hover
+{
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #000;
 }
 .header-links ul li a i
 {
     margin-right: 10px;
+    border: none;
     font-size: 19px;
 }
 
@@ -107,3 +122,42 @@ p
     padding-top: 30px;
     color: #fff;
 }
+
+
+/*Responsive design now*/
+
+@media screen and (min-width: 73em )
+{
+
+    .header-logo h2
+    {
+        font-size: 40px;
+        padding-top: 50px;
+        margin-left: 50px;
+    }
+    .header-links ul li
+    {
+        margin-right: 40px;
+    }
+    .header-links ul li a
+    {
+        font-size: 22px;
+    }
+    .header-links ul li a i
+    {
+        font-size: 30px;
+    }
+    .landing-banner
+    {
+        height: 50vh;
+    }
+    .landing-banner h2
+    {
+        font-size: 35px;
+        margin: 60px 0 0 60px;
+    }
+
+}
+
+
+
