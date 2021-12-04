@@ -1,1 +1,109 @@
 /*this stylesheet contains all the code for the landing page for the market place*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*The landing page styling*/
+/*this stylesheet contains all the styling for the landing page*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+    font-size: 17px;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Actual page styling*/
+
+.landingpage
+{
+    
+}
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo h2
+{
+    padding-top: 30px;
+    margin-left: 10px;
+    color: #000;
+}
+.header-links ul li
+{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 5px;
+    padding-top: 30px;
+}
+.header-links ul li a
+{
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+}
+.header-links ul li a i
+{
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+/*Banner section*/
+.landing-banner
+{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url("../../images/farmproduces.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    width: 100%;
+    margin-bottom: 60px;
+}
+.landing-banner h2
+{
+    margin: 50px 0 50px 30px;
+    padding-top: 30px;
+    color: #fff;
+}
