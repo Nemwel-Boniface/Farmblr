@@ -60,6 +60,7 @@ p
 .landing-gradient
 {
     background: linear-gradient(to top, #66ff99 0%, #006600 100%);
+    /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); */
     width: 100%;
     height: 75vh;
     padding: 20px 15px 20px 15px;
@@ -125,6 +126,35 @@ p
         margin-right: 30px;
         font-size: 19px;
     }
+
+    /*the gradient layer section*/
+    .landing-gradient
+    {
+        height: 40vh;
+    }
+    .landing-gradient-heading h2
+    {
+        font-size: 40px;
+        margin-bottom: 46px;
+    }
+
+    /*the input sections*/
+    .landing-gradient-choices
+    {
+        display: flex;
+        margin: 0 15%;
+    }
+    .landing-gradient-choices select
+    {
+        margin-right: 20px;
+        height: 50px;
+    }
+    .landing-gradient-choices input
+    {
+        margin-right: 20px;
+        height: 50px;
+    }
+
 
 
 }

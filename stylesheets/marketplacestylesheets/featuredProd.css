@@ -1,0 +1,31 @@
+/*This section will contain the styling for the featured products section*/
+/*I will use a mobile first approach to design*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+html, body {
+  overflow-x: hidden;
+} 
+body
+{
+  background: #fff;
+    position: relative;
+    font-size: 17px;
+}
+h2
+{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+p
+{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*actual page styling*/
