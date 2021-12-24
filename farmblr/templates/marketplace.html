@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <head>
         
@@ -8,13 +9,13 @@
         
         <!--Stylesheets-->
         
-        <link rel="stylesheet" href="stylesheets/marketplacestylesheets/landing.css">
-        <link rel="stylesheet" href="stylesheets/marketplacestylesheets/featuredProd.css">
-        <link rel="stylesheet" href="stylesheets/marketplacestylesheets/productcategories.css">
-        <link rel="stylesheet" href="stylesheets/footer.css">
-        <link rel="stylesheet" href="stylesheets/marketplacestylesheets/">
-        <link rel="stylesheet" href="stylesheets/marketplacestylesheets/">
-        <link rel="stylesheet" href="stylesheets/marketplacestylesheets/">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets/landing.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets/featuredProd.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets/productcategories.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets' %}">
         
         <!--meta tags-->
         
@@ -115,7 +116,7 @@
     
                 <article class="group">
                     <div class="featuredProduct-left">
-                        <img src="images/farmproduces.jpg" alt="farmproduces">
+                        <img src="{% static 'images/farmproduces.jpg' %}" alt="farmproduces">
     
                     </div>
                     <div class="featuredProduct-right">
@@ -152,7 +153,7 @@
 
                 <div class="subsections">
                     <div class="item">
-                        <img src="images/bagsofrice.jpeg" alt="bags of rice">
+                        <img src="{% static 'images/bagsofrice.jpeg' %}" alt="bags of rice">
                         <div>
                             <p>Rice Mwea Pishori</p>
                             <h2 class="highlighted">New</h2>
@@ -162,7 +163,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/bagsofcereals.jpeg" alt="bags of cereals">
+                        <img src="{% static 'images/bagsofcereals.jpeg' %}" alt="bags of cereals">
                         <div>
                             <p>Cereals beans</p>
                             <h2 class="highlighted">New</h2>
@@ -172,7 +173,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/bagsofrice.jpeg" alt="bags of rice">
+                        <img src="{% static 'images/bagsofrice.jpeg' %}" alt="bags of rice">
                         <div>
                             <p>Rice Mwea Pishori</p>
                             <h2 class="highlighted">New</h2>
@@ -192,7 +193,7 @@
 
                 <div class="subsections">
                     <div class="item">
-                        <img src="images/farmproduces.jpg" alt="Vegetables">
+                        <img src="{% static 'images/farmproduces.jpg' %}" alt="Vegetables">
                         <div>
                             <p>Capsicum Tomatoes</p>
                             <h2 class="highlighted">New</h2>
@@ -202,7 +203,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/farmproducts.jpg" alt="Vegetables">
+                        <img src="{% static 'images/farmproducts.jpg' %}" alt="Vegetables">
                         <div>
                             <p>Capsicum Tomatoes</p>
                             <h2 class="highlighted">New</h2>
@@ -212,7 +213,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/farmproduces.jpg" alt="Vegetables">
+                        <img src="{% static 'images/farmproduces.jpg' %}" alt="Vegetables">
                         <div>
                             <p>Capsicum Tomatoes</p>
                             <h2 class="highlighted">New</h2>
@@ -232,7 +233,7 @@
 
                 <div class="subsections">
                     <div class="item">
-                        <img src="images/imagesofmeats.jpeg" alt="imagesofmeats">
+                        <img src="{% static 'images/imagesofmeats.jpeg' %}" alt="imagesofmeats">
                         <div>
                             <p>Beef, Muttock</p>
                             <h2 class="highlighted">New</h2>
@@ -242,7 +243,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/imagesoffish.jpeg" alt="imagesoffish">
+                        <img src="{% static 'images/imagesoffish.jpeg' %}" alt="imagesoffish">
                         <div>
                             <p>Tilapia</p>
                             <h2 class="highlighted">New</h2>
@@ -252,7 +253,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/imagesofmeats.jpeg" alt="imagesofmeats">
+                        <img src="{% static 'images/imagesofmeats.jpeg' %}" alt="imagesofmeats">
                         <div>
                             <p>Beef, Muttock</p>
                             <h2 class="highlighted">New</h2>
@@ -272,7 +273,7 @@
 
                 <div class="subsections">
                     <div class="item">
-                        <img src="images/bagofmaize.jpeg" alt="bagofmaize">
+                        <img src="{% static 'images/bagofmaize.jpeg' %}" alt="bagofmaize">
                         <div>
                             <p>Maize flour</p>
                             <h2 class="highlighted">New</h2>
@@ -282,7 +283,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/bagofsugar.jpeg" alt="bagofsugar">
+                        <img src="{% static 'images/bagofsugar.jpeg' %}" alt="bagofsugar">
                         <div>
                             <p>Tilapia</p>
                             <h2 class="highlighted">New</h2>
@@ -292,7 +293,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/bagofmaize.jpeg" alt="bagofmaize">
+                        <img src="{% static 'images/bagofmaize.jpeg' %}" alt="bagofmaize">
                         <div>
                             <p>Maize flour</p>
                             <h2 class="highlighted">New</h2>
@@ -312,7 +313,7 @@
 
                 <div class="subsections">
                     <div class="item">
-                        <img src="images/spaghetti.jpeg" alt="spaghetti">
+                        <img src="{% static 'images/spaghetti.jpeg' %}" alt="spaghetti">
                         <div>
                             <p>Maize flour</p>
                             <h2 class="highlighted">New</h2>
@@ -322,7 +323,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/spaghetti.jpeg" alt="spaghetti">
+                        <img src="{% static 'images/spaghetti.jpeg' %}" alt="spaghetti">
                         <div>
                             <p>Maize flour</p>
                             <h2 class="highlighted">New</h2>
@@ -332,7 +333,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/spaghetti.jpeg" alt="spaghetti">
+                        <img src="{% static 'images/spaghetti.jpeg' %}" alt="spaghetti">
                         <div>
                             <p>Maize flour</p>
                             <h2 class="highlighted">New</h2>
@@ -353,7 +354,7 @@
 
                 <div class="subsections">
                     <div class="item">
-                        <img src="images/bagsofspices.jpeg" alt="bagsofspices">
+                        <img src="{% static 'images/bagsofspices.jpeg' %}" alt="bagsofspices">
                         <div>
                             <p>Clove, Sage</p>
                             <h2 class="highlighted">New</h2>
@@ -363,7 +364,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/bagsofsalt.jpeg" alt="bagsofsalt">
+                        <img src="{% static 'images/bagsofsalt.jpeg' %}" alt="bagsofsalt">
                         <div>
                             <p>Bags of Salt</p>
                             <h2 class="highlighted">New</h2>
@@ -373,7 +374,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="images/bagsofspices.jpeg" alt="bagsofspices">
+                        <img src="{% static 'images/bagsofspices.jpeg' %}" alt="bagsofspices">
                         <div>
                             <p>Clove, Sage</p>
                             <h2 class="highlighted">New</h2>
