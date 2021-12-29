@@ -85,10 +85,10 @@
                         <a href="{% url 'marketplace' %}" class="nav-link">Shop</a>
                         </li>
                         <li class="nav-item">
-                        <a href="#" class="nav-link">Blog</a>
+                        <a href="{% url 'blog' %}" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
-                        <a href="#" class="nav-link">Log In </a>
+                        <a href="{% url 'login' %}" class="nav-link">Log In </a>
                         </li>
                         <li class="nav-item">
                         <a href="#" class="nav-link signUp">Sign Up </a>
@@ -189,7 +189,7 @@
                 </div>
                 
                 <div class="cards">
-                    <img src="../static/images/fast-delivery.png" alt="Transparency">
+                    <img src="{% static 'images/fast-delivery.png' %}" alt="Transparency">
                     <div class="card">
                         <h2>Fast delivery</h2>
                     </div>

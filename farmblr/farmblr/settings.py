@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+from decouple import config, Csv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
+    'blog',
+    'accounts',
+    'products'
 ]
 
 MIDDLEWARE = [
@@ -124,7 +128,26 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+#  User uploaded files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email configuration
+# EMAIL_BACKEND = config('EMAIL_BACKEND')
+# EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+# EMAIL_ACTIVE_FIELD = config('EMAIL_ACTIVE_FIELD')
+# EMAIL_SERVER = EMAIL_HOST = config('EMAIL_HOST')
+# EMAIL_PORT = config('EMAIL_PORT', cast=int)
+# EMAIL_ADDRESS = EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+# EMAIL_FROM_ADDRESS = config('EMAIL_HOST_USER')
+# EMAIL_PASSWORD = EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')  # os.environ['password_key'] suggested
+# EMAIL_MAIL_SUBJECT = config('EMAIL_MAIL_SUBJECT')
+# EMAIL_MAIL_HTML = config('EMAIL_MAIL_HTML')
+# EMAIL_PAGE_TEMPLATE = config('EMAIL_PAGE_TEMPLATE')
+# EMAIL_PAGE_DOMAIN = config('EMAIL_PAGE_DOMAIN')
+# DEFAULT_FROM_EMAIL = config('EMAIL_FROM_ADDRESS')

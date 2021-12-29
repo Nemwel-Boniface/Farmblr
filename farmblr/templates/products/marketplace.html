@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        
+        <!--page title-->
+        
+        <title>Farmblr Market Place</title>
+        
+        <!--Stylesheets-->
+        
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets/landing.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets/featuredProd.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets/productcategories.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets' %}">
+        <link rel="stylesheet" href="{% static 'stylesheets/marketplacestylesheets' %}">
+        
+        <!--meta tags-->
+        
+        <meta name="author" content="Nemwel Boniface contact me at +254727475518 or visit my linkedin: https://www.linkedin.com/in/nemwel-nyandoro-aa1b2620b">
+        <meta name="description" content="Farmbir is an online platform which acts as a link for farmers to their potential markets">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta charset="utf-8">
+        
+        <!-- the page fonts-->
+        
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&display=swap" rel="stylesheet">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        
+        <!-- font awesome icons -->
+
+         <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">-->
+    
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+       <!--Smooth scroll script-->
+       
+       <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    </head>
+    <body>
+
+        <!--begin of the landing page now-->
+
+        <section class="landing-page">
+            <div class="landing-top">
+                <div class="landing-top-logo">
+                    <h2>Farmblr</h2>
+                </div>
+                <div class="landing-top-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Cart</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="landing-gradient">
+                <div class="landing-gradient-heading">
+                    <h2>Order fresh Produce from us</h2>
+                </div>
+
+                <div class="landing-gradient-choices">
+                    <div>
+                        <select id="categories">
+                            <option value="">All categories</option>
+                            {% for category in categories %}
+                                <option value="{{ category }}">{{ category}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                   <div>
+                        <input type="text" placeholder="  Search Products">
+                   </div>
+
+                   <div>
+                    <select id="country">
+                        <option value="">All Regions</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <output value="Djiboutti">Djiboutti</output>
+                        <option value="Ethiopia">Ethiopia</option>
+                    </select>
+                   </div>
+
+                   <div>
+                       <input id="button" type="button" value=" Search"><i class="fa fa-search" aria-hidden="true"></i>
+
+                   </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Begin of the featured products section-->
+
+        <section class="featuredProduct">
+            <div class="featuredProduct-heading">
+                <h2>Featured Product</h2>
+            </div>
+            <article class="grouping">
+    
+                <article class="group">
+                    <div class="featuredProduct-left">
+                        <img src="{% static 'images/farmproduces.jpg' %}" alt="farmproduces">
+    
+                    </div>
+                    <div class="featuredProduct-right">
+                        <h2>Collection of fresh produce</h2>
+                        <p>Often red with black stripes, shuka cloth is affectionately known as the “African blanket” and is worn by the Maasai people of East Africa.It's known to be durable, strong, and thick — protecting the Maasai from the harsh weather and terrain of the savannah. </p>
+                        <div class="faded">
+                            <p>By : Kelvin</p>
+                            <p>Location : Nanyuki</p>
+                        </div>
+                        <div class="rightpurchase">
+                            <p>KSH 2000</p>
+                            <p>Purchase Products</p>
+                        </div>
+                    </div>
+                </article>
+    
+            </article>
+
+
+        </section>
+
+        <!--The section containing all the products now-->
+
+        <section class="products">
+            <div class="products-heading">
+                <h2>Our Products Categories</h2>
+            </div>
+
+            {% for category in categories %}
+                <article class="prod">
+                    <div class="prod-heading">
+                        <h2>{{ category }}</h2>
+                        <p class="faded">{{ category.examples }}..</p>
+                    </div>
+
+                    <div class="subsections">
+                        {% for product in products %}
+                        {% if product.category == category %}
+                        <div class="item">
+                        <img src="{{product.photo.url}}" alt="{{product.product_name}}">
+                        <div>
+                            <p>{{product.product_name}}</p>
+                            <h2 class="highlighted">New</h2>
+                            <p class="faded">From : {{product.fr0m}}</p>
+                            <p class="priced">{{product.price}}</p>
+                        </div>
+                        </div>
+                        {% endif %}
+
+                        {% endfor %}
+                    </div>
+
+                </article>
+            {% endfor %}
+
+        </section>
+
+        <script>
+            //smooth scroll
+        var scroll = new SmoothScroll('a[href*="#"]', {
+	     speed: 300
+        });    
+            
+        </script>
+    </body>
+</html>
